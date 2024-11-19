@@ -1,0 +1,140 @@
+object Form2: TForm2
+  Left = 470
+  Top = 161
+  Width = 928
+  Height = 480
+  Caption = #1072#1074#1090#1086#1084#1086#1073#1080#1083#1080
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 48
+    Top = 8
+    Width = 26
+    Height = 13
+    Caption = #1062#1077#1085#1072
+  end
+  object Label2: TLabel
+    Left = 256
+    Top = 8
+    Width = 24
+    Height = 13
+    Caption = #1040#1074#1090#1086
+  end
+  object Label3: TLabel
+    Left = 480
+    Top = 8
+    Width = 25
+    Height = 13
+    Caption = #1062#1074#1077#1090
+  end
+  object DBGrid1: TDBGrid
+    Left = 96
+    Top = 104
+    Width = 705
+    Height = 177
+    DataSource = DataSource1
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'id_avto'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'zena'
+        Width = 157
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'avto'
+        Width = 256
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'tsvet'
+        Width = 416
+        Visible = True
+      end>
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 168
+    Top = 312
+    Width = 240
+    Height = 25
+    DataSource = DataSource1
+    TabOrder = 1
+  end
+  object DBEdit1: TDBEdit
+    Left = 96
+    Top = 8
+    Width = 121
+    Height = 21
+    DataField = 'zena'
+    DataSource = DataSource1
+    TabOrder = 2
+  end
+  object DBEdit2: TDBEdit
+    Left = 296
+    Top = 8
+    Width = 121
+    Height = 21
+    DataField = 'avto'
+    DataSource = DataSource1
+    TabOrder = 3
+  end
+  object DBEdit3: TDBEdit
+    Left = 520
+    Top = 8
+    Width = 121
+    Height = 21
+    DataField = 'tsvet'
+    DataSource = DataSource1
+    TabOrder = 4
+  end
+  object MySQLDatabase1: TMySQLDatabase
+    Connected = True
+    DatabaseName = 'bh35910_kis'
+    UserName = 'bh35910_student1711'
+    UserPassword = 'pgu2023pgu2023'
+    Host = '91.219.194.4'
+    ConnectOptions = []
+    ConnectionCharacterSet = 'utf8'
+    Params.Strings = (
+      'Port=3306'
+      'TIMEOUT=30'
+      'DatabaseName=bh35910_kis'
+      'UID=bh35910_student1711'
+      'PWD=pgu2023pgu2023'
+      'Host=91.219.194.4')
+    DatasetOptions = []
+    Left = 128
+    Top = 72
+  end
+  object MySQLTable1: TMySQLTable
+    Database = MySQLDatabase1
+    Active = True
+    TableName = 'Krasnorutsky_avto'
+    Left = 208
+    Top = 72
+  end
+  object DataSource1: TDataSource
+    DataSet = MySQLTable1
+    Left = 288
+    Top = 72
+  end
+end
